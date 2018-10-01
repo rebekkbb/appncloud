@@ -22,7 +22,7 @@
 			<br>
 			<div class="row">
 			<div class="col-4 col-sm-3 btn1" id="1" onclick="Add(id)">1</div>
-			<div class="col-4 col-sm-3 btn2" id="2" onclick="Add(id)">2</div>
+			<div class="col-4 col-sm-3 btn2" id="2" style="background-color:yellow;" onclick="Add(id)">2</div>
 			<div class="col-4 col-sm-3 btn1" id="3" onclick="Add(id)">3</div>
 			<div class="col-4 col-sm-3 btn2" id="4" onclick="Add(id)">4</div>
 			<div class="col-4 col-sm-3 btn1" id="5" onclick="Add(id)">5</div>

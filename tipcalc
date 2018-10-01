@@ -23,9 +23,11 @@
   </div>
 </div>
 
-<table style="container">
+<object width="400" height="400" data="table"></object>
+
+<table style="width:100%">
   <tr>
-    <th>Firstname</th>
+    <th>table.row</th>
     <th>Lastname</th> 
     <th>Age</th>
   </tr>

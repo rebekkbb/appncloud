@@ -5,4 +5,10 @@
   <body>
     hello world!
    </body>
+   <script>
+    function v(){
+      var w = document.documentElement.clientWidth;
+      alert("Your width is"+w)
+    }
+    </script>
  </html>

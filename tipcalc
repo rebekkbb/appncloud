@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <div class="row">
+<body>
+	<div class="container-fluid">
+		<div class="row" style="border:solid; height:60px">
+		  <div class="col-12" style="text-align:center; font-size:xx-large;color:grey;" id="display"></div>
+		</div>
+		<br>
+		<div class="row">
+		<div class="col-4 btn1" id="0.25" onclick="Compute(id)">0.25</div>
+		<div class="col-4 btn2" id="0.50" onclick="Compute(id)">0.5</div>
+		<div class="col-4 btn1" id="0.75" onclick="Compute(id)">0.75</div>
+		</div>
+		<br>
+		<div class="row">
 		<div class="col-4 col-sm-3 btn1" id="1" onclick="Add(id)">1</div>
 		<div class="col-4 col-sm-3 btn2" id="2" onclick="Add(id)">2</div>
 		<div class="col-4 col-sm-3 btn1" id="3" onclick="Add(id)">3</div>
@@ -12,5 +24,25 @@
 		<div class="col-4 col-sm-3 btn1" id="9" onclick="Add(id)">9</div>
 		<div class="col-4 col-sm-3 btn2" id="0" onclick="Add(id)">0</div>
 		<div class="col col-sm-6 btn1" onclick="Clear()">CLEAR</div>
-   </div>
+                </div>
+		</div>
+	
+	<script>
+		function Compute(op) {
+			res="??";
+			tip = Number(op);
+			amount=document.getElementById("display");
+			a=amount.innerText;
+                	document.getElementById("display").innerHTML = tip*Number(a);
+		}
+		function Add(digit) {
+                	document.getElementById("display").innerHTML += digit;
+		}
+		function Clear() {
+                	document.getElementById("display").innerHTML ="";
+		}
+	</script>
+	
+
+</body>
 </html>

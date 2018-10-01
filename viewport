@@ -2,13 +2,14 @@
 <html>
   <head>
   </head>
-  <body>
+  <body onload="v()">
     hello world!
-   </body>
-   <script>
-    function v(){
-      var w = document.documentElement.clientWidth;
-      alert("Your width is"+w)
-    }
-    </script>
+  </body>
+  
+  <script>
+   function v(){
+     var w = document.documentElement.clientWidth;
+     alert("Your width is"+w)
+   }
+  </script>
  </html>

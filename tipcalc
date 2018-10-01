@@ -14,7 +14,7 @@
 			  <div class="col-12" style="text-align:center; font-size:xx-large;color:grey;" id="display"></div>
 			</div>
 			<br>
-			<div class="row">
+			<div class="row" style="background-color:yellow;">
 			<div class="col-4 btn1" id="0.25" onclick="Compute(id)">0.25</div>
 			<div class="col-4 btn2" id="0.50" onclick="Compute(id)">0.5</div>
 			<div class="col-4 btn1" id="0.75" onclick="Compute(id)">0.75</div>

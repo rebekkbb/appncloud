@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
+  <body style="background-color: green">
   <body onload="v()">
     Hello World! Spot the viewport!"
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus magna quam, sed interdum ipsum dictum at. 

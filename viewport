@@ -3,13 +3,24 @@
   <head>
   </head>
   <body onload="v()">
-    hello world!
+    Hello World! Spot the viewport!"
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus magna quam, sed interdum ipsum dictum at. 
+    Morbi vitae tellus scelerisque, hendrerit elit in, rutrum nunc. 
+    Duis finibus magna nec velit luctus aliquam. 
+    Pellentesque ultrices scelerisque turpis a dignissim. 
+    Phasellus vehicula elit ac lacus eleifend, non placerat risus elementum. 
+    Nulla rutrum eros a ullamcorper imperdiet. 
+    Curabitur pulvinar interdum nibh vitae dignissim. 
+    Curabitur sollicitudin augue vel massa euismod, in bibendum neque tincidunt. 
+    Vivamus lobortis auctor lorem, eget commodo ante pretium ac. Praesent maximus nulla eget leo accumsan gravida. 
+    Aenean mollis augue ultrices tortor vestibulum sollicitudin. Fusce sed ante eu urna interdum egestas. Pellentesque porttit
   </body>
   
   <script>
    function v(){
      var w = document.documentElement.clientWidth;
-     alert("Your width is"+w)
+     var h= document.documentElement.clientHight;
+     alert("Your viewport is  is "+w+" x "+h);
    }
   </script>
  </html>

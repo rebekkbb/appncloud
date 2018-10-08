@@ -12,27 +12,44 @@
 
 <body>
 	  <ul data-role="listview" data-inset="true">
-	    <li data-role="list-divider">Friday, October 8, 2010 <span class="ui-li-count">2</span></li>
+	    <li data-role="list-divider"> getdata() <span class="ui-li-count">2</span></li>
 	    <li><a href="index.html">
 	    <h2>Stephen Weber</h2>
 	    <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
 	    <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
 		<p class="ui-li-aside"><strong>6:24</strong>PM</p>
 	    </a></li>
-	    <li><a href="index.html">
-	    <h2>jQuery Team</h2>
-	    <p><strong>Boston Conference Planning</strong></p>
-	    <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
-		<p class="ui-li-aside"><strong>9:18</strong>AM</p>
-	    </a></li>
-	    <li data-role="list-divider">Thursday, October 7, 2010 <span class="ui-li-count">1</span></li>
-	    <li><a href="index.html">
-	    <h2>Avery Walker</h2>
-	    <p><strong>Re: Dinner Tonight</strong></p>
-	    <p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait!</p>
-		<p class="ui-li-aside"><strong>4:48</strong>PM</p>
-	    </a></li>
 	</ul>
+	
+	<script>
+		function getdata() {
+			endpoint = 'latest'
+			access_key = 'e908e6fffa4b4bd4b2da5522e0167f7a';
+			// get the most recent news rates via the "latest" endpoint:
+			$.ajax({
+    				url: 'https://newsapi.org' + endpoint + '?access_key=' + access_key,   
+    				dataType: 'jsonp',
+    				success: function(json) {
+				dates = json['publishedAt'];
+				//alert(dates);
+				for (var k in dates) {
+					$( "#all" ).append( "<li>"+k+"  "+dates[k]+"</li>" );
+					//  string1 += object1[property1];
+				}
+				$("#all").listview('refresh');
+			        // exchange rata data is stored in json.rates
+        			//alert(json.rates.GBP);
+        
+        			// base currency is stored in json.base
+        			//alert(json.base);
+        
+        			// timestamp can be accessed in json.timestamp
+        			//alert(json.timestamp);
+        
+  		  }
+		});
+		}
+	</script>
 
 </body>
 </html>

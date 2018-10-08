@@ -11,15 +11,6 @@
         </head>
 
 <body>
-	  <ul data-role="listview" data-inset="true">
-	    <li data-role="list-divider"> "json.dates" <span class="ui-li-count">2</span></li>
-	    <li><a href="index.html">
-	    <h2>Stephen Weber</h2>
-	    <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
-	    <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
-		<p class="ui-li-aside"><strong>6:24</strong>PM</p>
-	    </a></li>
-	</ul>
 	
 	<script>
 		function getdata() {
@@ -31,10 +22,18 @@
     				dataType: 'jsonp',
     				success: function(json) {
 				dates = json['publishedAt'];
+				cont = json['content']
 				//alert(dates);
 				for (var k in dates) {
-					$( "#all" ).append( "<li>"+k+"  "+dates[k]+"</li>" );
-					//  string1 += object1[property1];
+					<ul data-role="listview" data-inset="true">
+					    <li data-role="list-divider"> date[k] <span class="ui-li-count">2</span></li>
+					    <li><a href="index.html">
+					    <h2>Stephen Weber</h2>
+					    <p><strong> "cont[k]" MA</strong></p>
+					    <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
+						<p class="ui-li-aside"><strong>6:24</strong>PM</p>
+					    </a></li>
+					</ul>
 				}
 				$("#all").listview('refresh');
 			        // exchange rata data is stored in json.rates
